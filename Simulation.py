@@ -72,14 +72,13 @@ class Simulation:
 
 # Main code
 def main():
-    simulation = Simulation(50)
-    for i in range(-2, 3):
-        for j in range(-2, 3):
-            simulation.add_vector(Vector((i, j)))
+    simulation = Simulation(100)
+
+    simulation.add_vector(Vector((3, -2)))
 
     t = radians(30)
-    matrix = [[cos(t), -5 * sin(t)],
-              [5 * sin(t), cos(t)]]
+    matrix = [[0, 1],
+              [1, 0]]
     simulation.display(LinearTransformation(matrix))
 
 

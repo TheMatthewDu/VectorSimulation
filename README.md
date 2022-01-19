@@ -1,2 +1,6 @@
 # VectorSimulation
-A Vector Simulation Program for simulating some concepts in Linear and Vector Algebra
+A Vector Simulation Program for simulating Linear Transformations using the 
+Python's `numpy` and `pygame` libraries.
+
+To start, run [`simulation.py`](Simulation.py).
+

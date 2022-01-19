@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Tuple, List, Optional
+from typing import Tuple, List
 from Vector import Vector
 from DisplayVector import DisplayVector
 from LinearTransformation import LinearTransformation
