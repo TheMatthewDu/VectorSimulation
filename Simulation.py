@@ -1,10 +1,12 @@
 from __future__ import annotations
+
+from typing import List
 import pygame
 import time
+
 from DisplayManager import DisplayManager
 from Vector import Vector
-from LinearTransformation import LinearTransformation, Matrix
-from math import sin, cos, radians
+from LinearTransformation import LinearTransformation
 
 
 class Simulation:
@@ -71,16 +73,24 @@ class Simulation:
 
 
 # Main code
-def main():
-    simulation = Simulation(100)
+def main(matrix: List[List[int]], vectors: List[Vector]):
+    # Specifies the size of the simulation
+    simulation = Simulation(50)
 
-    simulation.add_vector(Vector((3, -2)))
+    for vector in vectors:
+        simulation.add_vector(vector)
 
-    t = radians(30)
-    matrix = [[0, 1],
-              [1, 0]]
     simulation.display(LinearTransformation(matrix))
 
 
 if __name__ == '__main__':
-    main()
+    # The matrix to preform the transformation
+    the_matrix = [[0, 1],
+                  [1, 0]]
+
+    # Vectors to transform
+    the_vectors = [
+        Vector((3, -2))
+    ]
+
+    main(the_matrix, the_vectors)
